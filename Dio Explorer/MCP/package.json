@@ -1,0 +1,25 @@
+{
+  "name": "dio-explorer-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server para o DIO Explorer — expõe trilhas, desafios e certificados via stdio, HTTP ou SSO/API-key.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "start:http": "node build/index.js --http"
+  },
+  "bin": {
+    "dio-explorer-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
