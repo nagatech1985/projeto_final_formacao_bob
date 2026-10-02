@@ -1,0 +1,8 @@
+# Bob IDE
+.bob/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
