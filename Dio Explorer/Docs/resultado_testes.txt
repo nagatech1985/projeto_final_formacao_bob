@@ -1,0 +1,168 @@
+======================================================================
+  DIO EXPLORER — RELATÓRIO DE TESTES UNITÁRIOS
+======================================================================
+  Data/Hora da Execução : 02/10/2026 10:56:12
+  Aluno Simulado        : Aluno Teste DIO
+  Tecnologia Testada    : Java
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  RESUMO DE EXECUÇÃO
+──────────────────────────────────────────────────────────────────────
+  Total de Testes  : 90
+  ✅ Aprovados     : 90
+  ❌ Falhas        : 0
+  💥 Erros         : 0
+  ⏭  Pulados       : 0
+  Taxa de Aprovação: 100.0%   (meta: ≥ 70%)
+  Status Geral     : ✅ APROVADO
+
+──────────────────────────────────────────────────────────────────────
+  COBERTURA DE FUNÇÕES DO MÓDULO dio_explorer.py
+──────────────────────────────────────────────────────────────────────
+  Função                                      Testes   Coberta
+  --------------------------------------------------------------
+  load_trilhas                                     4     ✓ Sim
+  buscar_trilhas                                   7     ✓ Sim
+  formatar_plano_de_estudos                       12     ✓ Sim
+  normalizar_nivel                                10     ✓ Sim
+  gerar_desafio                                   12     ✓ Sim
+  formatar_desafio                                 8     ✓ Sim
+  _gerar_codigo_verificacao                        4     ✓ Sim
+  buscar_trilha_para_certificado                   6     ✓ Sim
+  gerar_certificado                               11     ✓ Sim
+  formatar_certificado                            15     ✓ Sim
+  --------------------------------------------------------------
+  TOTAL                                           89    100.0%
+
+──────────────────────────────────────────────────────────────────────
+  FLUXO TESTADO — /trilha  /desafio  /certificado  (Java)
+──────────────────────────────────────────────────────────────────────
+
+  1. /trilha Java
+     • Busca case-insensitive na base trilhas_dio.json
+     • Retorna 'Fullstack Java + Angular' (id=1)
+     • Plano formatado com módulos, badges, lives e promoção
+
+  2. /desafio Java intermediário
+     • Nível normalizado para 'Intermediário'
+     • Tipo: Estrutura de Dados / OO / Consumo de API (aleatório)
+     • XP: 800 pontos
+
+  3. /certificado 'Aluno Teste DIO' 'Fullstack Java + Angular'
+     • Trilha localizada por nome parcial
+     • Código de verificação: DIO-XXXXXXXXXXXX gerado
+     • Data de emissão: hoje
+     • Badges ✅ incluídas: Java Developer, Spring Boot Expert, Angular Fundamentals
+
+──────────────────────────────────────────────────────────────────────
+  SAÍDA DETALHADA DO RUNNER unittest
+──────────────────────────────────────────────────────────────────────
+
+test_busca_com_espacos_extras_no_termo (test_trilha.TestBuscarTrilhas.test_busca_com_espacos_extras_no_termo) ... ok
+test_busca_java_case_insensitive_maiusculo (test_trilha.TestBuscarTrilhas.test_busca_java_case_insensitive_maiusculo) ... ok
+test_busca_java_case_insensitive_minusculo (test_trilha.TestBuscarTrilhas.test_busca_java_case_insensitive_minusculo) ... ok
+test_busca_java_parcial_spring (test_trilha.TestBuscarTrilhas.test_busca_java_parcial_spring)
+'spring boot' is part of the Java trail's tecnologia field. ... ok
+test_busca_java_retorna_trilha_java (test_trilha.TestBuscarTrilhas.test_busca_java_retorna_trilha_java) ... ok
+test_busca_retorna_multiplas_trilhas (test_trilha.TestBuscarTrilhas.test_busca_retorna_multiplas_trilhas)
+Both trails contain 'python' if we add a second python trail. ... ok
+test_busca_tecnologia_inexistente_retorna_lista_vazia (test_trilha.TestBuscarTrilhas.test_busca_tecnologia_inexistente_retorna_lista_vazia) ... ok
+test_contem_badges (test_trilha.TestFormatarPlanoDeEstudos.test_contem_badges) ... ok
+test_contem_cupom_de_desconto (test_trilha.TestFormatarPlanoDeEstudos.test_contem_cupom_de_desconto) ... ok
+test_contem_live (test_trilha.TestFormatarPlanoDeEstudos.test_contem_live) ... ok
+test_contem_nivel (test_trilha.TestFormatarPlanoDeEstudos.test_contem_nivel) ... ok
+test_contem_nome_da_trilha (test_trilha.TestFormatarPlanoDeEstudos.test_contem_nome_da_trilha) ... ok
+test_contem_numero_de_modulos (test_trilha.TestFormatarPlanoDeEstudos.test_contem_numero_de_modulos) ... ok
+test_contem_tecnologia (test_trilha.TestFormatarPlanoDeEstudos.test_contem_tecnologia) ... ok
+test_contem_xp_total (test_trilha.TestFormatarPlanoDeEstudos.test_contem_xp_total) ... ok
+test_sem_lives_exibe_mensagem (test_trilha.TestFormatarPlanoDeEstudos.test_sem_lives_exibe_mensagem) ... ok
+test_sem_promocao_exibe_mensagem (test_trilha.TestFormatarPlanoDeEstudos.test_sem_promocao_exibe_mensagem) ... ok
+test_vitalicio_nao (test_trilha.TestFormatarPlanoDeEstudos.test_vitalicio_nao) ... ok
+test_vitalicio_sim (test_trilha.TestFormatarPlanoDeEstudos.test_vitalicio_sim) ... ok
+test_busca_java_no_arquivo_real (test_trilha.TestLoadTrilhas.test_busca_java_no_arquivo_real)
+End-to-end: search Java in the real data file. ... ok
+test_load_de_arquivo_temporario (test_trilha.TestLoadTrilhas.test_load_de_arquivo_temporario) ... ok
+test_load_retorna_lista (test_trilha.TestLoadTrilhas.test_load_retorna_lista)
+Integration test: load real JSON file and verify list returned. ... ok
+test_load_trilhas_contem_campos_obrigatorios (test_trilha.TestLoadTrilhas.test_load_trilhas_contem_campos_obrigatorios) ... ok
+test_aviso_padrao_presente_quando_nivel_invalido (test_desafio.TestFormatarDesafio.test_aviso_padrao_presente_quando_nivel_invalido) ... ok
+test_saida_contem_nivel (test_desafio.TestFormatarDesafio.test_saida_contem_nivel) ... ok
+test_saida_contem_tecnologia (test_desafio.TestFormatarDesafio.test_saida_contem_tecnologia) ... ok
+test_saida_contem_tipo (test_desafio.TestFormatarDesafio.test_saida_contem_tipo) ... ok
+test_saida_contem_xp (test_desafio.TestFormatarDesafio.test_saida_contem_xp) ... ok
+test_saida_e_string (test_desafio.TestFormatarDesafio.test_saida_e_string) ... ok
+test_saida_nao_vazia (test_desafio.TestFormatarDesafio.test_saida_nao_vazia) ... ok
+test_sem_aviso_quando_nivel_valido (test_desafio.TestFormatarDesafio.test_sem_aviso_quando_nivel_valido) ... ok
+test_nivel_invalido_usa_padrao (test_desafio.TestGerarDesafio.test_nivel_invalido_usa_padrao) ... ok
+test_nivel_valido_sem_aviso_padrao (test_desafio.TestGerarDesafio.test_nivel_valido_sem_aviso_padrao) ... ok
+test_retorna_dict_com_chaves_obrigatorias (test_desafio.TestGerarDesafio.test_retorna_dict_com_chaves_obrigatorias) ... ok
+test_tecnologia_com_espacos_extras (test_desafio.TestGerarDesafio.test_tecnologia_com_espacos_extras) ... ok
+test_tecnologia_preservada (test_desafio.TestGerarDesafio.test_tecnologia_preservada) ... ok
+test_tipo_avancado_valido (test_desafio.TestGerarDesafio.test_tipo_avancado_valido) ... ok
+test_tipo_basico_valido (test_desafio.TestGerarDesafio.test_tipo_basico_valido) ... ok
+test_tipo_intermediario_valido (test_desafio.TestGerarDesafio.test_tipo_intermediario_valido) ... ok
+test_xp_avancado (test_desafio.TestGerarDesafio.test_xp_avancado) ... ok
+test_xp_basico (test_desafio.TestGerarDesafio.test_xp_basico) ... ok
+test_xp_basico_sem_acento (test_desafio.TestGerarDesafio.test_xp_basico_sem_acento) ... ok
+test_xp_intermediario (test_desafio.TestGerarDesafio.test_xp_intermediario) ... ok
+test_avancado_com_acento (test_desafio.TestNormalizarNivel.test_avancado_com_acento) ... ok
+test_avancado_sem_acento (test_desafio.TestNormalizarNivel.test_avancado_sem_acento) ... ok
+test_basico_com_acento (test_desafio.TestNormalizarNivel.test_basico_com_acento) ... ok
+test_basico_sem_acento (test_desafio.TestNormalizarNivel.test_basico_sem_acento) ... ok
+test_intermediario_com_acento (test_desafio.TestNormalizarNivel.test_intermediario_com_acento) ... ok
+test_intermediario_sem_acento (test_desafio.TestNormalizarNivel.test_intermediario_sem_acento) ... ok
+test_nivel_com_espaco_no_inicio_e_fim (test_desafio.TestNormalizarNivel.test_nivel_com_espaco_no_inicio_e_fim) ... ok
+test_nivel_invalido_retorna_padrao (test_desafio.TestNormalizarNivel.test_nivel_invalido_retorna_padrao) ... ok
+test_nivel_numerico_retorna_padrao (test_desafio.TestNormalizarNivel.test_nivel_numerico_retorna_padrao) ... ok
+test_string_vazia_retorna_padrao (test_desafio.TestNormalizarNivel.test_string_vazia_retorna_padrao) ... ok
+test_busca_com_espacos_extras (test_certificado.TestBuscarTrilhaParaCertificado.test_busca_com_espacos_extras) ... ok
+test_busca_java_no_arquivo_real (test_certificado.TestBuscarTrilhaParaCertificado.test_busca_java_no_arquivo_real)
+Integration test: search Java in the real data file. ... ok
+test_busca_por_nome_case_insensitive (test_certificado.TestBuscarTrilhaParaCertificado.test_busca_por_nome_case_insensitive) ... ok
+test_busca_por_nome_exato_parcial (test_certificado.TestBuscarTrilhaParaCertificado.test_busca_por_nome_exato_parcial) ... ok
+test_busca_por_tecnologia_fallback (test_certificado.TestBuscarTrilhaParaCertificado.test_busca_por_tecnologia_fallback)
+When name doesn't match, falls back to searching by tecnologia. ... ok
+test_trilha_nao_encontrada_retorna_none (test_certificado.TestBuscarTrilhaParaCertificado.test_trilha_nao_encontrada_retorna_none) ... ok
+test_contem_badges (test_certificado.TestFormatarCertificado.test_contem_badges) ... ok
+test_contem_codigo_verificacao (test_certificado.TestFormatarCertificado.test_contem_codigo_verificacao) ... ok
+test_contem_data_emissao (test_certificado.TestFormatarCertificado.test_contem_data_emissao) ... ok
+test_contem_modulos (test_certificado.TestFormatarCertificado.test_contem_modulos) ... ok
+test_contem_nivel (test_certificado.TestFormatarCertificado.test_contem_nivel) ... ok
+test_contem_nome_aluno (test_certificado.TestFormatarCertificado.test_contem_nome_aluno) ... ok
+test_contem_nome_trilha (test_certificado.TestFormatarCertificado.test_contem_nome_trilha) ... ok
+test_contem_plataforma_dio (test_certificado.TestFormatarCertificado.test_contem_plataforma_dio) ... ok
+test_contem_tecnologia (test_certificado.TestFormatarCertificado.test_contem_tecnologia) ... ok
+test_contem_xp (test_certificado.TestFormatarCertificado.test_contem_xp) ... ok
+test_fluxo_completo_java_arquivo_real (test_certificado.TestFormatarCertificado.test_fluxo_completo_java_arquivo_real)
+End-to-end integration test: ... ok
+test_saida_e_string (test_certificado.TestFormatarCertificado.test_saida_e_string) ... ok
+test_saida_nao_vazia (test_certificado.TestFormatarCertificado.test_saida_nao_vazia) ... ok
+test_vitalicio_nao (test_certificado.TestFormatarCertificado.test_vitalicio_nao) ... ok
+test_vitalicio_sim (test_certificado.TestFormatarCertificado.test_vitalicio_sim) ... ok
+test_badges_corretas (test_certificado.TestGerarCertificado.test_badges_corretas) ... ok
+test_chaves_obrigatorias (test_certificado.TestGerarCertificado.test_chaves_obrigatorias) ... ok
+test_codigo_verificacao_formato (test_certificado.TestGerarCertificado.test_codigo_verificacao_formato) ... ok
+test_data_emissao_hoje (test_certificado.TestGerarCertificado.test_data_emissao_hoje) ... ok
+test_nome_aluno_com_espacos_extras (test_certificado.TestGerarCertificado.test_nome_aluno_com_espacos_extras) ... ok
+test_nome_aluno_preservado (test_certificado.TestGerarCertificado.test_nome_aluno_preservado) ... ok
+test_numero_modulos_correto (test_certificado.TestGerarCertificado.test_numero_modulos_correto) ... ok
+test_retorna_dict (test_certificado.TestGerarCertificado.test_retorna_dict) ... ok
+test_trilha_correta (test_certificado.TestGerarCertificado.test_trilha_correta) ... ok
+test_vitalicio_falso (test_certificado.TestGerarCertificado.test_vitalicio_falso) ... ok
+test_vitalicio_verdadeiro (test_certificado.TestGerarCertificado.test_vitalicio_verdadeiro) ... ok
+test_xp_total_correto (test_certificado.TestGerarCertificado.test_xp_total_correto) ... ok
+test_apenas_maiusculas_e_digitos_apos_prefixo (test_certificado.TestGerarCodigoVerificacao.test_apenas_maiusculas_e_digitos_apos_prefixo) ... ok
+test_codigos_diferentes_a_cada_chamada (test_certificado.TestGerarCodigoVerificacao.test_codigos_diferentes_a_cada_chamada) ... ok
+test_comeca_com_dio (test_certificado.TestGerarCodigoVerificacao.test_comeca_com_dio) ... ok
+test_comprimento_total (test_certificado.TestGerarCodigoVerificacao.test_comprimento_total) ... ok
+
+----------------------------------------------------------------------
+Ran 90 tests in 0.009s
+
+OK
+
+
+======================================================================
+  Fim do relatório — 02/10/2026 10:56:12
+======================================================================
